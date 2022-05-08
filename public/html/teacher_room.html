@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jquery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <script>
+        $(function () {
+            $("#main_sidebar").load("./sidebar2.html");
+            // $("#right-section").load("..//chat/chat.html")
+        }
+        );
+
+
+    </script>
+
+    <link rel="stylesheet" href="../css/teacher_room.css">
+    <link href="../css/sidebar2.css" rel="stylesheet" type="text/css">
+    <!-- chat application link -->
+    <!-- <link href="..//chat/chat.css" rel="stylesheet" type="text/css"> -->
+
+
+    <title>Room-main223</title>
+
+</head>
+
+<body>
+
+    <div id="main_sidebar"></div>
+    <div class="main-container" id="main">
+        <div class="container ">
+        
+            <div class="row" id="room_detail_row">
+                <div class="col" id="room_details_block">
+                    <div id="subject_name" class="room_item">Subject</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container notes-section">
+            <div class="left-section">
+                <a href="./teacher_notes.html" target="blank" style="color: black;">
+                    <div class="row notes-row">
+                        <div class="col-xs-7">
+                            <div>
+                                <h3 class="text-left">Notes</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./teacher_assignment.html" target="blank" style="color: black;">
+                    <div class="row notes-row" id="Assignment-section">
+                        <div class="col-xs-7">
+                            <div>
+                                <h3 class="text-left">Assignment</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="./teacher_practical.html" target="blank" style="color: black;">
+                    <div class="row notes-row" id="practical-section">
+                        <div class="col-md-7">
+                            <div>
+                                <h3 class="text-left">Practical</h3>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </a>
+            <!-- <div id="right-section">
+                <a href="./Chat_index.html"><img id="chat-icon" src="https://img.icons8.com/color/48/000000/chat--v3.gif" style="width: 100px; height: 100px;"/></a>
+                <a href="https://icons8.com/icon/aIYDmrSk6X13/chat">Chat icon by Icons8</a>
+                <h4>Chat </h4>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="../js/teacher_room.js"></script>
+</body>
+
+</html>

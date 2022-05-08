@@ -1,0 +1,81 @@
+body
+{
+  /* overflow: hidden; */
+}
+.main-container{
+    width: calc(100% - 200px);
+    margin-top: 70px;
+    margin-left: 200px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+ .main-container-effect{
+  width: calc(100% - 70px);
+  margin-left:90px ;
+
+}
+#room_detail_row{
+  height: 200px;
+  background: whitesmoke;
+  width : 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #2d4cfa;
+  position: relative;
+  text-align: center;
+}
+#room_detail_block img{
+  width: 100%;
+  height: 200px;
+  padding: 0px;
+} 
+.notes-section{
+  display: flex;
+  width: 100%;
+}
+#room_details_block hr{
+  border-bottom: 2px solid silver;
+
+}
+.room_item
+{
+  font-size: 20px;
+  margin: 20px 0px 0px 32px;
+  color:#2d4cfa ;
+}
+.container img{
+  width: 100px;
+  height: 100px;
+}
+.left-section{
+  width: 60%;
+}
+#right-section{
+  width: 35%;
+  margin-left: 10px;
+  border: 2px solid rgb(170, 170, 170);
+  background-color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+#subject_name{
+  margin-top: -7px;
+}
+.notes-row{
+  height: 80px;
+  width : 100%;
+  background: whitesmoke;
+  margin-bottom: 20px;
+  border-left: 6px solid #2d4cfa ;
+  border-top: 2px solid #2d4cfa ;
+  color: #2d4cfa ;
+  border-bottom: 2px solid #2d4cfa;
+  border-right: 2px solid #2d4cfa ;
+}
+
+.text-left{
+  margin-left: 20px 25px ;
+}

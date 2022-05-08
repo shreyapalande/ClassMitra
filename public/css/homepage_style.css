@@ -1,0 +1,66 @@
+body{
+    background: url(../images/background3.png);
+    font-family: "Playfair,Display";
+}
+#logo-text
+{
+    
+    font-size: 30px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.login_sign-btn{
+    background-color: rgba(85, 56, 248, 0.973);
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    border-bottom: 1px solid silver;
+    border-right: 1px solid silver;
+    box-shadow: 0 4px 10px 0 rgba(238, 238, 58, 0.123), 0 6px 20px 0 rgba(218, 138, 18, 0.658);
+}
+.login_sign-btn:hover{
+    text-decoration: underline;
+    background-color: rgba(85, 56, 248, 0.973);
+}
+.login_sign-btn a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;   
+}
+.quote{
+    margin-top: 60px;
+}
+.txt-align{
+margin-top: 30px;
+margin-left: 30px;
+text-decoration: underline;
+color: whitesmoke;
+font-size: 40px;
+}
+.row{
+    margin: 80px 20px 20px 20px;
+}
+.card-body{
+    height: 90px;
+    box-shadow: 0 4px 10px 0 rgba(238, 238, 58, 0.123), 0 6px 20px 0 rgba(218, 138, 18, 0.658);
+}
+.join-btn{
+    background-color: blueviolet;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(238, 238, 58, 0.123), 0 6px 20px 0 rgba(218, 138, 18, 0.658);
+}
+.join-btn:hover{
+    text-decoration: underline;
+    box-shadow:  3px 4px #5a5a5a;
+    background-color: rgba(85, 56, 248, 0.973);
+}
+
+.join-btn a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 24px;
+}

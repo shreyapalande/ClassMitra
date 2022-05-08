@@ -1,0 +1,192 @@
+
+body{
+  background: linear-gradient(rgb(203, 221, 255),white);
+  height: 100vh;
+}
+
+#chat-section{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 600px;
+    width: 100%;
+    background-color: rgba(123, 123, 247, 0.801);
+    border-radius: 20px;
+    overflow-y: scroll;
+
+  }
+  #chats{
+    border-bottom-left-radius: 20px;
+    border-left: 2px solid silver;
+    border-top-left-radius: 20px;
+    background-color: whitesmoke;
+  }
+  .back-icon{
+    font-size: 18px;
+    color: rgb(51, 50, 50);
+  }
+
+  .chat-area{
+    border: 2px solid rgba(231, 231, 231, 0.932);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 9px;
+
+    /* background-color: black; */
+  }
+  #userList{
+    display: flex;
+    flex-direction: column;
+  }
+  #userList h3{
+    margin-left: 9px;
+    border-bottom: 2px solid ;
+    margin-bottom: 10px;
+  }
+  #roomList{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 400px;
+  }
+ #room-name{
+   margin-top: 30px;
+ }
+  #user_title{
+    margin-top: 20px;
+    text-align: center;
+  }
+  #roomList ul .list {
+    height: 50px;
+    list-style: none;
+    width: 90%; 
+    background-color: whitesmoke;
+    margin: 5px 0px 10px 0px;
+    text-align: center;
+    line-height: 45px;
+    padding:0px 10px 0px 0px ;
+    border-radius: 10px;
+    border: 2px solid silver;
+    
+  }
+  #roomList ul .list .user_logo{
+    padding: 10px;
+  }
+#roomList ul li a{
+  font-size: 20px;
+ color: rgb(102, 102, 238);
+ display: flex;
+}
+#roomList  {
+  overflow-y: scroll;
+
+}
+  .chat-area header{
+    display: flex;
+  }
+  .chat-area header .btn_leave{
+    width: 100px;
+    height: 50px;
+    margin-top: 8px ;
+    margin-left: 554px;
+    border-radius: 10px;
+    background-color: #e5e5e4;
+  }
+  .chat-area header .btn_leave .fas{
+    font-size: 40px;
+    color: black;
+    margin-left: 26px;
+    margin-top: 4px;
+  }
+  /* .chat-area header .btn .fas{
+    font-size: 2px;
+  } */
+  .back-icon{
+    margin: 20px 10px;
+  }
+ 
+  .chat-area header img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 10px 10px 10px 5px;
+  }
+  /* .chat-area header .details{
+     margin-top: 10px;
+     margin-left: 10px;
+     font-size: 17px;
+     font-weight: 500;
+  } */
+  #chatbox{
+    display: flex;
+     flex-direction: column; 
+    justify-content: flex-start; 
+  
+  }
+  #chatbox .chat{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 70px;
+    background-color:rgb(206, 206, 255);
+  }
+  #chatbox .greet{
+    height: 40px;
+    width: 300px;
+    background-color:rgb(206, 206, 255) ;
+    position: relative;
+    top :20px;
+    left: 375px;
+    border-radius:20px ;
+    margin-bottom: 20px;
+  }
+  #chatbox #welcome{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-top:8px ;
+    color: blueviolet;
+    font-weight: 600;
+  }
+  #chatbox .chat .details {
+    padding:5px 0px 0px 10px ;
+    color: blueviolet;
+    font-weight: 700;
+    border-bottom: 1px solid silver;
+  }
+
+  #chatbox .chat .text{
+    padding-left:10px ;
+    color:black;
+    font-weight: 600;
+
+  }
+  
+  .send{
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
+  }
+  #send-container input{
+    height: 50px;
+    width: 70%;
+    border: none;
+    background-color: silver;
+    color: whitesmoke;
+    font-size: 24px;
+    outline: none;
+    border-radius:10px ;
+    padding-left: 30px;
+  }
+  #send-container button{
+    width: 20%;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    outline: none;
+    border-radius:10px ;
+    font-size: 24px;
+  }
+  /* #chat-section::-webkit-scrollbar{
+  width: 20px;
+} */

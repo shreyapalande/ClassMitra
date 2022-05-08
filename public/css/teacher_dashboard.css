@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body
+{
+    overflow-x: hidden;
+    font-family: 'Andada Pro' ;
+}
+#create_container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background:white;
+    border-radius: 10px;
+    padding: 0 40px;
+    display: none;
+    z-index: 2;
+    border: 2px solid silver;
+}
+#create_container h5{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+#class_name{
+    width: 100%;
+    padding: 0 5px;
+    height: 60px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline: none;
+}
+#create_class{
+    position: fixed;
+    /* margin: 20px 0px 0px 762px; */
+    right: 0px;
+    display: block;
+    margin: 40px 43px;
+    box-sizing: border-box;
+}
+.container{
+    /* background-color: blue; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.txt-field{
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 30px 0;
+}
+.txt-field input{
+    width: 90%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline: none;
+}
+.txt-field label{
+    position: absolute;
+    top: 70%;
+    left: 5px;
+    color: silver;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: .5s;
+}
+.txt-field span::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: 20px;
+    background-color: #2691d9;
+}
+.txt-field input:focus~label,.txt-field input:valid~label{
+ top: -5px;
+ color: #2691d9;
+
+}
+.txt-field input:focus~span~label,.txt-field input:focus~span~label
+{
+    width: 100%;
+}
+#room-btn{
+    margin: 0px 0px 10px 92px;
+}
+.main-container
+{
+    width: calc(100% - 200px);
+    /* display: none; */
+    margin-top: 70px;
+    margin-left: 190px;
+    padding: 20px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.main-container-effect
+{
+    width: calc(100% - 70px);
+    margin-left:90px ;   
+} 
+#class_list{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px 20px 0px ;
+    flex-wrap: wrap;
+    
+}
+.class-card
+{
+    margin-bottom: 25px;
+}
+.class{
+    margin: 20px 20px;
+}
+.card{
+    border: 1px solid rgb(114, 114, 247)
+}
+.card-body a
+{
+    margin-right: 15px ;
+    margin-bottom: 10px ;
+}
+
+.teacher-card{
+    margin: 25px; 
+    padding: 20px ; 
+    background-color: rgb(187, 223, 239);
+}

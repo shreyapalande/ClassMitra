@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassMitra | Login </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../css/login_style.css" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-sm-6 ">
+            <div class="form-form">
+                <h2>ClassMitra</h2>
+                <hr>
+                <div class="panel" style="margin-top: 25px ; border: 0px ;">
+                    <div class="panel-heading">
+                        <center><h4 style="font-weight: bold ;">Log-in</h4></center>
+                    </div>
+                    <div class="panel-body">
+                        <form action="" id="login-form">
+                            <div class="form-group" id="role-name">
+                                <label for="role" style="margin-right: 15px;">Role</label>
+                                <div class="form-check radio-inline" >
+                                    <input type="radio" class="form-check-input " id="radio1" name="form-role" value="Student" >Student
+                                    <label class="form-check-label" for="radio1"></label>
+                                </div>
+                                <div class="form-check radio-inline">
+                                    <input type="radio" class="form-check-input " id="radio2" name="form-role" value="Teacher">Teacher
+                                    <label class="form-check-label" for="radio2"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="form-email" type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input id="form-password" type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <input class="btn btn-login" value="SUBMIT">
+                        </form> 
+                    </div>
+                    <div class="panel-footer" style="padding: 15px;">
+                        <p>Don't have an account? <a href="../html/signup.html" class="panel-footer-text">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" col-sm-6 login-img" ></div>
+    </div>
+    <script type="module"  src="../js/login.js"></script>
+</body>
+</html>

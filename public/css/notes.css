@@ -1,0 +1,48 @@
+body{
+    overflow-x: hidden;
+}
+.main-container{
+    width: calc(100% - 200px);
+    margin-top: 70px;
+    margin-left: 200px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.main-container-effect{
+    width: calc(100% - 70px);
+    margin-left:90px ;
+   
+  }
+.notes_list {
+    height: 70px;
+    background-color: whitesmoke;
+    border-left: 5px solid #2d4cfa ;
+    border-right: 2px solid #2d4cfa ;
+    border-top: 2px solid #2d4cfa ;
+    border-bottom: 2px solid #2d4cfa ;
+    margin: 10px 0px 20px 0px;
+
+    position: relative;
+}
+.notes_list a {
+    text-decoration: none;
+}
+
+.container_body{
+    margin-top: 10px;
+}
+
+.notes_list a span{
+    padding-top: 15px;
+    font-size: 24px;
+    color: black;
+    padding-left: 20px;
+    display: inline-block;
+}
+.notes_list  .btn
+{
+  position: absolute;
+  right: 77px;
+  bottom: 17px;
+}
+

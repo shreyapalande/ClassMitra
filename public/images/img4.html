@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://cdn.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn.vectorstock.com">
+	<meta name="theme-color" content="#101122">
+	<script type="text/javascript" nonce="pgnRCZvH0LprrCDsclIeZWBnGhcF2F7DT7WMfu9ruys=">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"02e09611df",applicationID:"156179534"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="csrf-name" content="csrf6248969ab413b">
+	<meta name="csrf-value" content="bafd8268b0300dff2ce5c806d6886020">
+	<meta name="csp-nonce" content="pgnRCZvH0LprrCDsclIeZWBnGhcF2F7DT7WMfu9ruys=">
+	<meta name="cart-hash" content="d751713988987e9331980363e24189ce">
+	<meta name="live-settings" content="[]">
+	<meta name="twitter:site" content="@VectorStock">
+	<meta property="og:site_name" content="VectorStock">
+	<meta property="fb:app_id" content="241100862642313">
+
+	<link rel="shortcut icon" href="https://cdn.vectorstock.com/img/icons/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="VectorStock Search" href="https://www.vectorstock.com/xml/searchbox.xml">
+
+	<title>Education background Royalty Free Vector Image</title>
+	<meta name="description" content="education color background. vector. eps8. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions..">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.vectorstock.com/royalty-free-vector/education-background-vector-1861428">
+	<meta property="og:title" content="Education background vector image on VectorStock">
+	<meta property="og:description" content="education color background. vector. eps8. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions.">
+	<meta property="og:image" content="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+	<meta property="og:image:url" content="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+	<meta property="og:image:secure_url" content="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="1000">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.vectorstock.com/royalty-free-vector/education-background-vector-1861428">
+	<meta name="twitter:title" content="Education background vector image">
+	<meta name="twitter:description" content="education color background. vector. eps8">
+	<meta name="twitter:image" content="https://cdn4.vectorstock.com/i/thumb-large/14/28/education-background-vector-1861428.jpg">
+	<meta name="twitter:image:width" content="238">
+	<meta name="twitter:image:height" content="250">
+
+	<link rel="canonical" href="https://www.vectorstock.com/royalty-free-vector/education-background-vector-1861428">
+
+	<link rel="stylesheet" type="text/css" href="/cache/common1646700216.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/common-payment-paddle1646700216.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/vector1646700216.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBXWNL4G7Q"></script>
+	<script src="/cache/common1648069091.min.js"></script>
+	<script src="/cache/common-payment-paddle1648069091.min.js"></script>
+	<script src="/cache/vector1648069091.min.js"></script>
+</head>
+<body>
+
+<!-- Top header -->
+<header>
+	<nav class="top">
+		<figure>
+			<a href="/" title="VectorStock&reg;">VectorStock&reg;</a>
+		</figure>
+
+		<div class="grid">
+			<form id="searchbox" class="focused empty">
+				<div class="wrap">
+					<fieldset>
+						<div class="contents">
+							<div class="tags">
+								<ul></ul>
+							</div>
+							<div class="input">
+								<input type="text" name="input" autocomplete="off" autocapitalize="none" spellcheck="true" value="" placeholder="Search&hellip;" maxlength="50" autofocus>
+								<button type="button" data-action="clear">&times;</button>
+							</div>
+
+							<input type="hidden" name="category" value="">
+							<input type="hidden" name="custom_srp" value="">
+							<input type="hidden" name="artist" value="">
+							<input type="hidden" name="similar" value="">
+						</div>
+					</fieldset>
+
+					<button type="submit">
+						<span class="icon">Search</span>
+					</button>
+				</div>
+			</form>
+			<ul>
+				<li><a href="/royalty-free-vectors">All Vectors</a></li>
+				<li><a href="/free-vectors">Free Vectors</a></li>
+			</ul>
+		</div>
+
+		<div class="aside">
+			<ul>
+				<li><a href="/popular-categories" title="Popular Categories">Categories</a></li>
+				<li><a href="/pricing" title="Pricing">Pricing</a></li>
+				<li class="account">
+					<button type="button" data-action="signup">Sign Up</button>
+					<button type="button" data-action="login">Login</button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="mobilenav-icon">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</nav>
+
+	<!-- Submenu -->
+		<nav id="searchrelated"></nav>	
+
+
+	<!-- Mobile menu -->
+	<div id="mobilenav-menu">
+		<div>
+			<div class="group">
+				<h4>Browse</h4>
+				<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4>Account</h4>
+				<ul>
+					<li class="account">
+						<ul>
+							<li><a href="/signup">Sign Up</a></li>
+							<li data-action="login"><a href="/?login=1">Login&hellip;</a></li>
+							<li><a href="/pricing">Pricing</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form method="get" action="/auth/logout" class="logout">
+					<input type="hidden" name="logout" value="1">
+				</form>
+			</div>
+			<div class="group">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="/faq"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- Account Menu Tabs -->
+		<aside id="nav_sidebar" class="tabs tabsDark">
+
+			<nav>
+				<ul role="tablist">
+					<li data-tab-id="signup" class=""><span role="tab"><span>Sign Up</span></span></li>
+					<li data-tab-id="login" class="selected"><span role="tab"><span>Log In</span></span></li>
+				</ul>
+			</nav>
+
+			<section id="sb_signup" data-tab-id="signup" class="">
+				<div class="primary">
+					<p>New to VectorStock?</p>
+					<p><em>We&apos;re the largest royalty-free, vector-only stock agency in the world.</em></p>
+					<p>Every week we add new premium graphics by the thousands.</p>
+				</div>
+				<div class="secondary">
+					<p>Whether you&apos;re a global ad&nbsp;agency or a freelance graphic designer, we have the vector graphics to make your project come to life.</p>
+					<p>Buy Vectors, sell Vectors or both. <a href="/signup">Sign up now, it&rsquo;s free.</a></p>
+				</div>
+				<div class="footer">
+					<button class="master">
+						<span class="title">Sign Up...</span>
+						<span class="value">
+							<span class="symbol signup"></span>
+						</span>
+					</button>
+				</div>
+			</section>
+
+			<section id="sb_login" data-tab-id="login" class="selected">
+				<form action="/auth/login" method="post">
+					<fieldset class="">
+						<label for="vs_username">Email / Username</label>
+						<div class="textfield">
+							<input type="text" id="vs_username" name="vs_username" value="" autocomplete="on" tabindex="1">
+						</div>
+					</fieldset>
+					<fieldset class="">
+						<label for="vs_password">Password</label>
+						<button type="button" class="forgot">Forgot Password</button>
+						<div class="textfield">
+							<input type="password" id="vs_password" name="vs_password" value="" autocomplete="on" tabindex="2"  maxlength="72">
+						</div>
+					</fieldset>
+
+
+					<button type="submit" tabindex="4">Log In</button>
+				</form>
+				<div class="alternatives">
+					<h6>Or Login With</h6>
+					<ul>
+						<li class="gp"><a href="/">
+							<span class="title">Google</span>
+							<span class="icon"></span>
+						</a></li>
+						<li class="fb"><a href="/">
+							<span class="title">Facebook</span>
+							<span class="icon"></span>
+						</a></li>
+					</ul>
+				</div>
+
+				
+			</section>
+		</aside>
+
+	<!-- Page -->
+	<article>
+		<section id="vs-asset">
+
+			<!-- Aside -->
+			<div class="aside">
+				<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors">
+							<span itemprop="name">Royalty Free Vectors</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors/student-vectors">
+							<span itemprop="name">Student Vectors</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+
+				<h1>Education background vector&nbsp;image</h1>
+
+				<figure style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.webp">
+							<source type="image/jpeg" srcset="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+							<img src="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg" importance="high" title="Education background vector image" alt="Education background">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+				</figure>
+
+				<form data-loggedin="0" data-licenses="2" data-license="standard" data-status="" data-payment="single-image">
+					<input type="hidden" id="vector_id" value="1861428">
+					<input type="hidden" id="vector_title" value="Education background">
+					<input type="hidden" id="vector_description" value="education color background. vector. eps8. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions.">
+					<input type="hidden" id="vector_url" value="https://www.vectorstock.com/royalty-free-vector/education-background-vector-1861428">
+					<input type="hidden" id="vector_media" value="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+					<input type="hidden" id="vector_ratio" value="1">
+					<input type="hidden" id="vector_license_status" value="">
+					<input type="hidden" id="artist_name" value="leone_v">
+					<input type="hidden" id="account_user" value="0">
+
+					<input type="hidden" id="vector_download_urls" value="[]">
+					<input type="hidden" id="vector_license_options" value="[{&quot;type&quot;:&quot;standard&quot;,&quot;cost&quot;:{&quot;single-image&quot;:14.99,&quot;credits&quot;:1,&quot;subscription&quot;:1}},{&quot;type&quot;:&quot;expanded&quot;,&quot;cost&quot;:{&quot;single-image&quot;:39.99,&quot;credits&quot;:30}}]">
+					<input type="hidden" id="account_filetype" value="zip">
+					<input type="hidden" id="account_customizations" value="[]">
+					<input type="hidden" id="account_cloud" value="[{&quot;type&quot;:&quot;googledrive&quot;,&quot;status&quot;:&quot;connect&quot;},{&quot;type&quot;:&quot;dropbox&quot;,&quot;status&quot;:&quot;connect&quot;}]">
+					
+					<div class="options">
+						<!--
+						-- OPTION: License type
+						-->
+						<div class="option" data-type="license" data-license="standard" data-licenses="2">
+							<h6><span class="type">License</span><a href="/faq/members/standard-license">Learn More</a></h6>
+							<div class="optgroup radgroup">
+								<fieldset class="checked">
+									<label for="f_license_standard">
+										<input type="radio" id="f_license_standard" name="license" value="standard" checked="checked" tabindex="2">
+										<span class="label">Standard</span>
+										<span class="descr">For Print, Advertising, Design</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_license_expanded">
+										<input type="radio" id="f_license_expanded" name="license" value="expanded" tabindex="4">
+										<span class="label">Expanded</span>
+										<span class="descr">For Print on Demand &amp; Resale</span>
+									</label>
+								</fieldset>
+							</div>
+
+							<div class="help">
+								<p>The license type determines how you can use this image.</p>
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+																						<th data-license="standard">Std.</th>																						<th data-license="expanded">Exp.</th>										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td>Print / Editorial</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Graphic Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Web Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Social Media</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Edit &amp; Modify</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Multi-user</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Resale Items</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Print on Demand</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<!--
+						-- OPTION: Payment options (Standard)
+						-->
+						<div class="option" data-type="payment" data-license="standard">
+							<h6><span class="type">Ways to Buy</span><a href="/pricing">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="standard">
+								<fieldset class="checked" >
+									<label for="f_payment_standard_single-image">
+										<input type="radio" id="f_payment_standard_single-image" name="payment_standard" data-cost="14.99" value="single-image"  checked="checked" tabindex="5">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>$</small><var>14.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_credits">
+										<input type="radio" id="f_payment_standard_credits" name="payment_standard" data-cost="1" value="credits" tabindex="6">
+										<span class="label">Credits</span>
+										<span class="value"><small>$</small><var>1.00</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_subscription">
+										<input type="radio" id="f_payment_standard_subscription" name="payment_standard" data-cost="1" value="subscription" tabindex="7">
+										<span class="label">Subscription</span>
+										<span class="value"><small>$</small><var>0.69</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>There are three ways to pay for Standard licenses. Prices are $<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Image Price</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>14.99</span>
+												</span>
+												<span class="byline">One-time payment</span>
+											</td>
+										</tr>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>1</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = $1). Minimum purchase of 30.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Subscription Plan</span>
+													<span class="dm"></span>
+													<span class="dd"><em>From</em> 69&cent;</span>
+												</span>
+												<span class="byline">Choose a monthly plan. Unused downloads automatically roll into following month.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--
+						-- OPTION: Payment options (Expanded)
+						-->
+						<div class="option" data-type="payment" data-license="expanded">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="expanded">
+								<fieldset class="checked">
+									<label for="f_payment_expanded_single-image">
+										<input type="radio" id="f_payment_expanded_single-image" name="payment_expanded" data-cost="39.99" value="single-image" checked="checked" tabindex="8">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>$</small><var>39.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_expanded_credits">
+										<input type="radio" id="f_payment_expanded_credits" name="payment_expanded" data-cost="30" value="credits" tabindex="9">
+										<span class="label">Credits</span>
+										<span class="value"><small>$</small><var>30.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+														<div class="help">
+								<p>There are two ways to pay for Expanded licenses. Prices are $<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Cost per Image</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>39.99</span>
+												</span>
+												<span class="byline">One-off payment, no signup needed.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>$</small>30</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = $1).</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+													</div>
+						<!--
+						-- OPTION: Customization
+						-->
+						<div class="option" data-type="customization">
+							<h6><span class="type">New Option!</span><a href="/faq/members/what-is-hire-a-designer">What is this?</a></h6>
+							<div class="optgroup chkgroup">
+								<fieldset>
+									<label for="f_payment_customization">
+										<input type="checkbox" id="f_payment_customization" name="payment_customization" data-cost="85" value="customization" tabindex="12">
+										<span class="label">Customize image</span>
+										<span class="descr">Only available with Pay-per-Image</span>
+										<span class="value"><small>$</small><var>85.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>Love the image but just need a few modifications? Let our talented artists do the work for you!</p>
+								<p>We&rsquo;ll connect you with a designer who can make updates and send you the artwork in a format of your choice.</p>
+								<h4>Examples</h4>
+								<ul>
+									<li>Change the text</li>
+									<li>Modify colors</li>
+									<li>Resize to new dimensions</li>
+									<li>Include logo or symbol</li>
+									<li>Add your company or business name</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="download">
+						<button type="button" data-action="download">
+							<span class="label">Download Image</span>
+							<span class="icon"></span>
+						</button>
+						<h6><span class="label">Files Included</span></h6>
+						<div class="help">
+							<span class="loading"><span class="label">Loading Details...</span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Image -->
+			<div class="image">
+				<figure data-orientation="square" style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.webp">
+							<source type="image/jpeg" srcset="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+							<img src="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg" importance="high" title="Education background vector image" alt="Education background">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+					<div class="panels">
+						<div class="share">
+							<h4>Share with others</h4>
+							<ul>
+								<li class="pinterest"><button type="button" data-action="pinterest"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M12.5,0C5.6,0,0,5.6,0,12.5c0,5.12,3.08,9.52,7.48,11.45c-0.03-0.87-0.01-1.92,0.22-2.87c0.24-1.01,1.61-6.81,1.61-6.81s-0.4-0.8-0.4-1.98c0-1.85,1.07-3.24,2.41-3.24c1.14,0,1.69,0.85,1.69,1.88c0,1.14-0.73,2.85-1.1,4.44c-0.31,1.33,0.67,2.41,1.97,2.41c2.37,0,3.96-3.04,3.96-6.65c0-2.74-1.85-4.79-5.2-4.79c-3.79,0-6.15,2.83-6.15,5.99c0,1.09,0.32,1.86,0.82,2.45c0.23,0.27,0.26,0.38,0.18,0.7c-0.06,0.23-0.2,0.78-0.25,1c-0.08,0.32-0.34,0.43-0.63,0.31c-1.75-0.71-2.56-2.62-2.56-4.77c0-3.55,3-7.81,8.93-7.81c4.77,0,7.91,3.45,7.91,7.16c0,4.9-2.73,8.57-6.75,8.57c-1.35,0-2.62-0.73-3.05-1.56c0,0-0.73,2.88-0.88,3.44c-0.27,0.96-0.78,1.93-1.26,2.68C10.08,24.82,11.27,25,12.5,25C19.4,25,25,19.4,25,12.5S19.4,0,12.5,0L12.5,0z"/></svg></span><span class="label">Pinterest</span></span></button></li>
+								<li class="facebook"><button type="button" data-action="facebook"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.44,1H2.56C1.7,1,1,1.7,1,2.56v19.88C1,23.3,1.7,24,2.56,24h10.41v-8.89H9.98v-3.46h2.99V9.1c0-2.96,1.81-4.58,4.45-4.58c1.27,0,2.35,0.09,2.67,0.14v3.1l-1.83,0c-1.44,0-1.72,0.68-1.72,1.69v2.21h3.43l-0.45,3.46h-2.98V24h5.89C23.3,24,24,23.3,24,22.44V2.56C24,1.7,23.3,1,22.44,1z"/></svg></span><span class="label">Facebook</span></span></button></li>
+								<li class="twitter"><button type="button" data-action="twitter"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M7.86,22.5c9.43,0,14.59-7.69,14.59-14.37c0-0.22,0-0.44-0.01-0.65c1-0.71,1.87-1.6,2.56-2.61c-0.92,0.4-1.91,0.67-2.95,0.79c1.06-0.62,1.87-1.61,2.26-2.79c-0.99,0.58-2.09,1-3.26,1.23c-0.94-0.98-2.27-1.6-3.74-1.6c-2.83,0-5.13,2.26-5.13,5.05c0,0.4,0.05,0.78,0.13,1.15C8.05,8.49,4.27,6.48,1.74,3.42C1.3,4.17,1.05,5.04,1.05,5.96c0,1.75,0.91,3.3,2.28,4.2C2.49,10.14,1.7,9.91,1,9.53C1,9.55,1,9.58,1,9.6c0,2.45,1.77,4.49,4.11,4.95c-0.43,0.12-0.88,0.18-1.35,0.18c-0.33,0-0.65-0.03-0.96-0.09c0.65,2.01,2.55,3.47,4.79,3.51C5.84,19.5,3.63,20.3,1.22,20.3c-0.41,0-0.82-0.02-1.22-0.07C2.27,21.66,4.97,22.5,7.86,22.5"/></svg></span><span class="label">Twitter</span></span></button></li>
+								<li class="email"><button type="button" data-action="email"><span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.48,4.17H2.52C1.13,4.17,0,5.3,0,6.69v11.62c0,1.39,1.13,2.52,2.52,2.52h19.96c1.39,0,2.52-1.13,2.52-2.52V6.69C25,5.3,23.87,4.17,22.48,4.17z M23.49,18.31c0,0.56-0.45,1.01-1.01,1.01H2.52c-0.55,0-1.01-0.45-1.01-1.01V6.69c0-0.56,0.45-1.01,1.01-1.01h19.96c0.56,0,1.01,0.45,1.01,1.01V18.31z"/><path d="M19.95,7.95l-7.45,4.83L5.05,7.95C4.7,7.72,4.24,7.82,4.01,8.17C3.78,8.52,3.88,8.99,4.23,9.22l7.86,5.1c0.13,0.08,0.27,0.12,0.41,0.12s0.29-0.04,0.41-0.12l7.86-5.1c0.35-0.23,0.45-0.7,0.22-1.05C20.77,7.82,20.3,7.72,19.95,7.95z"/></svg></span><span class="label">Email</span></span></button></li>
+							</ul>
+						</div>
+						<div class="composite">
+							<button type="button" data-action="download"><span><span class="label">Download JPG Preview Image</span></span></button>
+						</div>
+					</div>
+				</figure>
+				<div class="details">
+					<div class="meta">
+						<ul>
+							<li class="meta-id">
+								<dl><dt>Image ID</dt><dd>1861428</dd></dl>
+							</li>
+							<li class="meta-color-mode">
+								<dl><dt>Color Mode</dt><dd>CMYK</dd></dl>
+							</li>
+							<li class="meta-artist">
+								<dl>
+									<dt>Artist</dt>
+									<dd>
+										<a href="/royalty-free-vectors/vectors-by_leone_v" rel="nofollow">leone_v</a>
+										<button type="button" data-action="follow" title="Follow Artists that you like to create a newsfeed of their recent images."><span class="label">Follow</span></button>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="options" data-total="2">
+						<ul>
+							<li class="opt-like">
+								<button type="button" data-action="like" data-count="0"><span class="icon">&hearts;</span><span class="label">Like</span><span class="tally"></span></button>
+							</li>
+							<li class="opt-cart">
+								<button type="button" data-action="cart"><span class="icon">+</span><span class="label">Cart</span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metadata -->
+			<div class="metadata">
+				<div itemtype="http://schema.org/ImageObject" itemscope>
+					<meta itemprop="contentUrl" content="https://cdn4.vectorstock.com/i/1000x1000/14/28/education-background-vector-1861428.jpg">
+					<meta itemprop="thumbnailUrl" content="https://cdn4.vectorstock.com/i/thumb-large/14/28/education-background-vector-1861428.jpg">
+					<meta itemprop="name" content="Education background">
+					<meta itemprop="description" content="Education color background. vector. eps8. Download a Free Preview or High Quality Adobe Illustrator Ai, EPS, PDF and High Resolution JPEG versions. vector image">
+					<meta itemprop="author" content="leone_v"/>
+					<meta itemprop="datePublished" content="2014-01-29">
+					<meta itemprop="license" content="https://www.vectorstock.com/faq/members/standard-license">
+					<meta itemprop="acquireLicensePage" content="https://www.vectorstock.com/royalty-free-vector/education-background-vector-1861428">
+					<meta itemprop="sourceOrganization" content="VectorStock.com">
+				</div>
+			</div>
+			
+		</section>
+
+
+		<section id="vs-related">
+						<div id="group-similar" class="group">
+				<h6><span class="icon"></span><strong>Similar Images</strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/73/38/education-logo-design-letter-a-design-vector-31927338.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-logo-design-letter-a-design-vector-31927338" title="education logo design letter a design vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/73/38/education-logo-design-letter-a-design-vector-31927338.jpg" title="education logo design letter a design" alt="education logo design letter a design vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/16/96/back-to-school-book-inspiration-online-learning-vector-38871696.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-book-inspiration-online-learning-vector-38871696" title="back to school book inspiration online learning vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/16/96/back-to-school-book-inspiration-online-learning-vector-38871696.jpg" title="back to school book inspiration online learning" alt="back to school book inspiration online learning vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/51/01/isometric-realistic-chalk-boards-isolated-on-white-vector-41425101.jpg"><a href="//www.vectorstock.com/royalty-free-vector/isometric-realistic-chalk-boards-isolated-on-white-vector-41425101" title="isometric realistic chalk boards isolated on white vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/51/01/isometric-realistic-chalk-boards-isolated-on-white-vector-41425101.jpg" title="isometric realistic chalk boards isolated on white" alt="isometric realistic chalk boards isolated on white vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/53/09/back-to-school-concept-vector-39915309.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-concept-vector-39915309" title="back to school concept vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/53/09/back-to-school-concept-vector-39915309.jpg" title="back to school concept" alt="back to school concept vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/78/71/back-to-school-education-concept-doodle-style-vector-26807871.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-education-concept-doodle-style-vector-26807871" title="back to school education concept doodle style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/78/71/back-to-school-education-concept-doodle-style-vector-26807871.jpg" title="back to school education concept doodle style" alt="back to school education concept doodle style vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/02/55/education-school-quote-in-french-language-vector-20890255.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-school-quote-in-french-language-vector-20890255" title="education school quote in french language vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/02/55/education-school-quote-in-french-language-vector-20890255.jpg" title="education school quote in french language" alt="education school quote in french language vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/95/73/back-to-school-banner-with-hand-drawn-line-art-vector-28369573.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-banner-with-hand-drawn-line-art-vector-28369573" title="back to school banner with hand drawn line art vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/95/73/back-to-school-banner-with-hand-drawn-line-art-vector-28369573.jpg" title="back to school banner with hand drawn line art" alt="back to school banner with hand drawn line art vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/06/99/cartoon-hand-drawn-doodles-school-poster-design-vector-21540699.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cartoon-hand-drawn-doodles-school-poster-design-vector-21540699" title="cartoon hand drawn doodles school poster design vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/06/99/cartoon-hand-drawn-doodles-school-poster-design-vector-21540699.jpg" title="cartoon hand drawn doodles school poster design" alt="cartoon hand drawn doodles school poster design vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/55/96/3d-online-school-concept-landing-page-template-vector-32285596.jpg"><a href="//www.vectorstock.com/royalty-free-vector/3d-online-school-concept-landing-page-template-vector-32285596" title="3d online school concept landing page template vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/55/96/3d-online-school-concept-landing-page-template-vector-32285596.jpg" title="3d online school concept landing page template" alt="3d online school concept landing page template vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/36/41/do-homework-on-desktop-with-laptop-banner-back-vector-32043641.jpg"><a href="//www.vectorstock.com/royalty-free-vector/do-homework-on-desktop-with-laptop-banner-back-vector-32043641" title="do homework on desktop with laptop banner back vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/36/41/do-homework-on-desktop-with-laptop-banner-back-vector-32043641.jpg" title="do homework on desktop with laptop banner back" alt="do homework on desktop with laptop banner back vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/43/46/back-to-school-animals-hand-drawn-style-education-vector-21414346.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-animals-hand-drawn-style-education-vector-21414346" title="back to school animals hand drawn style education vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/43/46/back-to-school-animals-hand-drawn-style-education-vector-21414346.jpg" title="back to school animals hand drawn style education" alt="back to school animals hand drawn style education vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/98/50/back-to-school-2019-word-trendy-composition-vector-21969850.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-2019-word-trendy-composition-vector-21969850" title="back to school 2019 word trendy composition vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/98/50/back-to-school-2019-word-trendy-composition-vector-21969850.jpg" title="back to school 2019 word trendy composition" alt="back to school 2019 word trendy composition vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/85/15/children-education-primary-school-concept-sketch-vector-22928515.jpg"><a href="//www.vectorstock.com/royalty-free-vector/children-education-primary-school-concept-sketch-vector-22928515" title="children education primary school concept sketch vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/85/15/children-education-primary-school-concept-sketch-vector-22928515.jpg" title="children education primary school concept sketch" alt="children education primary school concept sketch vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/37/48/back-to-school-and-education-vector-29523748.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-and-education-vector-29523748" title="back to school and education vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/37/48/back-to-school-and-education-vector-29523748.jpg" title="back to school and education" alt="back to school and education vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/97/99/book-learn-poster-open-with-gold-star-linear-vector-20939799.jpg"><a href="//www.vectorstock.com/royalty-free-vector/book-learn-poster-open-with-gold-star-linear-vector-20939799" title="book learn poster open with gold star linear vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/97/99/book-learn-poster-open-with-gold-star-linear-vector-20939799.jpg" title="book learn poster open with gold star linear" alt="book learn poster open with gold star linear vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/78/back-to-school-poster-school-blackboard-vector-21448778.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-poster-school-blackboard-vector-21448778" title="back to school poster school blackboard vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/78/back-to-school-poster-school-blackboard-vector-21448778.jpg" title="back to school poster school blackboard" alt="back to school poster school blackboard vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/00/14/man-with-a-book-teacher-s-day-literacy-day-vector-38710014.jpg"><a href="//www.vectorstock.com/royalty-free-vector/man-with-a-book-teacher-s-day-literacy-day-vector-38710014" title="man with a book teacher s day literacy day vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/00/14/man-with-a-book-teacher-s-day-literacy-day-vector-38710014.jpg" title="man with a book teacher s day literacy day" alt="man with a book teacher s day literacy day vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/71/08/handdrawn-lettering-1-september-design-template-vector-21617108.jpg"><a href="//www.vectorstock.com/royalty-free-vector/handdrawn-lettering-1-september-design-template-vector-21617108" title="handdrawn lettering 1 september design template vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/71/08/handdrawn-lettering-1-september-design-template-vector-21617108.jpg" title="handdrawn lettering 1 september design template" alt="handdrawn lettering 1 september design template vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/45/82/backpack-infographic-design-with-icons-vector-21424582.jpg"><a href="//www.vectorstock.com/royalty-free-vector/backpack-infographic-design-with-icons-vector-21424582" title="backpack infographic design with icons vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/45/82/backpack-infographic-design-with-icons-vector-21424582.jpg" title="backpack infographic design with icons" alt="backpack infographic design with icons vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/78/98/landing-page-template-education-concept-vector-26007898.jpg"><a href="//www.vectorstock.com/royalty-free-vector/landing-page-template-education-concept-vector-26007898" title="landing page template education concept vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/78/98/landing-page-template-education-concept-vector-26007898.jpg" title="landing page template education concept" alt="landing page template education concept vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="21949338" data-title="flat education concept" data-src="https://cdn4.vectorstock.com/i/thumbs/93/38/flat-education-concept-vector-21949338.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-education-concept-vector-21949338" title="flat education concept vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/93/38/flat-education-concept-vector-21949338.jpg" title="flat education concept" alt="flat education concept vector image"></noscript></a></li>
+						<li data-id="31887418" data-title="back to school lettering" data-src="https://cdn4.vectorstock.com/i/thumbs/74/18/back-to-school-lettering-vector-31887418.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-lettering-vector-31887418" title="back to school lettering vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/74/18/back-to-school-lettering-vector-31887418.jpg" title="back to school lettering" alt="back to school lettering vector image"></noscript></a></li>
+						<li data-id="1190332" data-title="abstract concept of education" data-src="https://cdn3.vectorstock.com/i/thumbs/03/32/abstract-concept-of-education-vector-1190332.jpg"><a href="//www.vectorstock.com/royalty-free-vector/abstract-concept-of-education-vector-1190332" title="abstract concept of education vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/03/32/abstract-concept-of-education-vector-1190332.jpg" title="abstract concept of education" alt="abstract concept of education vector image"></noscript></a></li>
+						<li data-id="38475561" data-title="back to school concept education" data-src="https://cdn2.vectorstock.com/i/thumbs/55/61/back-to-school-concept-education-vector-38475561.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-concept-education-vector-38475561" title="back to school concept education vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/55/61/back-to-school-concept-education-vector-38475561.jpg" title="back to school concept education" alt="back to school concept education vector image"></noscript></a></li>
+						<li data-id="22807608" data-title="school backpack isolated from low poly wire frame" data-src="https://cdn4.vectorstock.com/i/thumbs/76/08/school-backpack-isolated-from-low-poly-wire-frame-vector-22807608.jpg"><a href="//www.vectorstock.com/royalty-free-vector/school-backpack-isolated-from-low-poly-wire-frame-vector-22807608" title="school backpack isolated from low poly wire frame vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/76/08/school-backpack-isolated-from-low-poly-wire-frame-vector-22807608.jpg" title="school backpack isolated from low poly wire frame" alt="school backpack isolated from low poly wire frame vector image"></noscript></a></li>
+						<li data-id="26445306" data-title="back to school banner education and knowledge" data-src="https://cdn2.vectorstock.com/i/thumbs/53/06/back-to-school-banner-education-and-knowledge-vector-26445306.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-banner-education-and-knowledge-vector-26445306" title="back to school banner education and knowledge vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/53/06/back-to-school-banner-education-and-knowledge-vector-26445306.jpg" title="back to school banner education and knowledge" alt="back to school banner education and knowledge vector image"></noscript></a></li>
+						<li data-id="26049553" data-title="back to school online education dynamic style" data-src="https://cdn4.vectorstock.com/i/thumbs/95/53/back-to-school-online-education-dynamic-style-vector-26049553.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-online-education-dynamic-style-vector-26049553" title="back to school online education dynamic style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/95/53/back-to-school-online-education-dynamic-style-vector-26049553.jpg" title="back to school online education dynamic style" alt="back to school online education dynamic style vector image"></noscript></a></li>
+						<li data-id="21471502" data-title="back to school brochure design" data-src="https://cdn3.vectorstock.com/i/thumbs/15/02/back-to-school-brochure-design-vector-21471502.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-brochure-design-vector-21471502" title="back to school brochure design vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/15/02/back-to-school-brochure-design-vector-21471502.jpg" title="back to school brochure design" alt="back to school brochure design vector image"></noscript></a></li>
+						<li data-id="26816080" data-title="chalk rubbed out on blackboard with wooden frame" data-src="https://cdn1.vectorstock.com/i/thumbs/60/80/chalk-rubbed-out-on-blackboard-with-wooden-frame-vector-26816080.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chalk-rubbed-out-on-blackboard-with-wooden-frame-vector-26816080" title="chalk rubbed out on blackboard with wooden frame vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/60/80/chalk-rubbed-out-on-blackboard-with-wooden-frame-vector-26816080.jpg" title="chalk rubbed out on blackboard with wooden frame" alt="chalk rubbed out on blackboard with wooden frame vector image"></noscript></a></li>
+						<li data-id="21243444" data-title="with design template for back" data-src="https://cdn5.vectorstock.com/i/thumbs/34/44/with-design-template-for-back-vector-21243444.jpg"><a href="//www.vectorstock.com/royalty-free-vector/with-design-template-for-back-vector-21243444" title="with design template for back vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/34/44/with-design-template-for-back-vector-21243444.jpg" title="with design template for back" alt="with design template for back vector image"></noscript></a></li>
+						<li data-id="26528487" data-title="education concept icons flat line design" data-src="https://cdn3.vectorstock.com/i/thumbs/84/87/education-concept-icons-flat-line-design-vector-26528487.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-concept-icons-flat-line-design-vector-26528487" title="education concept icons flat line design vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/84/87/education-concept-icons-flat-line-design-vector-26528487.jpg" title="education concept icons flat line design" alt="education concept icons flat line design vector image"></noscript></a></li>
+						<li data-id="22973747" data-title="back to school stationery discount or gift" data-src="https://cdn3.vectorstock.com/i/thumbs/37/47/back-to-school-stationery-discount-or-gift-vector-22973747.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-stationery-discount-or-gift-vector-22973747" title="back to school stationery discount or gift vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/37/47/back-to-school-stationery-discount-or-gift-vector-22973747.jpg" title="back to school stationery discount or gift" alt="back to school stationery discount or gift vector image"></noscript></a></li>
+						<li data-id="21495044" data-title="back to school colorful doodle lettering sign" data-src="https://cdn5.vectorstock.com/i/thumbs/50/44/back-to-school-colorful-doodle-lettering-sign-vector-21495044.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-colorful-doodle-lettering-sign-vector-21495044" title="back to school colorful doodle lettering sign vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/50/44/back-to-school-colorful-doodle-lettering-sign-vector-21495044.jpg" title="back to school colorful doodle lettering sign" alt="back to school colorful doodle lettering sign vector image"></noscript></a></li>
+						<li data-id="5531356" data-title="flat science and education blackboard with long" data-src="https://cdn2.vectorstock.com/i/thumbs/13/56/flat-science-and-education-blackboard-with-long-vector-5531356.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-science-and-education-blackboard-with-long-vector-5531356" title="flat science and education blackboard with long vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/13/56/flat-science-and-education-blackboard-with-long-vector-5531356.jpg" title="flat science and education blackboard with long" alt="flat science and education blackboard with long vector image"></noscript></a></li>
+						<li data-id="21244773" data-title="concept of education seamless pattern school" data-src="https://cdn4.vectorstock.com/i/thumbs/47/73/concept-of-education-seamless-pattern-school-vector-21244773.jpg"><a href="//www.vectorstock.com/royalty-free-vector/concept-of-education-seamless-pattern-school-vector-21244773" title="concept of education seamless pattern school vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/47/73/concept-of-education-seamless-pattern-school-vector-21244773.jpg" title="concept of education seamless pattern school" alt="concept of education seamless pattern school vector image"></noscript></a></li>
+						<li data-id="33995761" data-title="pencil sharpener seamless back" data-src="https://cdn2.vectorstock.com/i/thumbs/57/61/pencil-sharpener-seamless-back-vector-33995761.jpg"><a href="//www.vectorstock.com/royalty-free-vector/pencil-sharpener-seamless-back-vector-33995761" title="pencil sharpener seamless back vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/57/61/pencil-sharpener-seamless-back-vector-33995761.jpg" title="pencil sharpener seamless back" alt="pencil sharpener seamless back vector image"></noscript></a></li>
+						<li data-id="25875591" data-title="school bag icon design template isolated" data-src="https://cdn2.vectorstock.com/i/thumbs/55/91/school-bag-icon-design-template-isolated-vector-25875591.jpg"><a href="//www.vectorstock.com/royalty-free-vector/school-bag-icon-design-template-isolated-vector-25875591" title="school bag icon design template isolated vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/55/91/school-bag-icon-design-template-isolated-vector-25875591.jpg" title="school bag icon design template isolated" alt="school bag icon design template isolated vector image"></noscript></a></li>
+						<li data-id="35016238" data-title="online education concept eps10 e-learning concept" data-src="https://cdn4.vectorstock.com/i/thumbs/62/38/online-education-concept-eps10-e-learning-concept-vector-35016238.jpg"><a href="//www.vectorstock.com/royalty-free-vector/online-education-concept-eps10-e-learning-concept-vector-35016238" title="online education concept eps10 e-learning concept vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/62/38/online-education-concept-eps10-e-learning-concept-vector-35016238.jpg" title="online education concept eps10 e-learning concept" alt="online education concept eps10 e-learning concept vector image"></noscript></a></li>
+						<li data-id="21263081" data-title="physics and mathematics books on sheet of paper" data-src="https://cdn2.vectorstock.com/i/thumbs/30/81/physics-and-mathematics-books-on-sheet-of-paper-vector-21263081.jpg"><a href="//www.vectorstock.com/royalty-free-vector/physics-and-mathematics-books-on-sheet-of-paper-vector-21263081" title="physics and mathematics books on sheet of paper vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/30/81/physics-and-mathematics-books-on-sheet-of-paper-vector-21263081.jpg" title="physics and mathematics books on sheet of paper" alt="physics and mathematics books on sheet of paper vector image"></noscript></a></li>
+						<li data-id="22341580" data-title="student at school game template" data-src="https://cdn1.vectorstock.com/i/thumbs/15/80/student-at-school-game-template-vector-22341580.jpg"><a href="//www.vectorstock.com/royalty-free-vector/student-at-school-game-template-vector-22341580" title="student at school game template vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/15/80/student-at-school-game-template-vector-22341580.jpg" title="student at school game template" alt="student at school game template vector image"></noscript></a></li>
+						<li data-id="39963121" data-title="school concept panoramic web template" data-src="https://cdn2.vectorstock.com/i/thumbs/31/21/school-concept-panoramic-web-template-vector-39963121.jpg"><a href="//www.vectorstock.com/royalty-free-vector/school-concept-panoramic-web-template-vector-39963121" title="school concept panoramic web template vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/31/21/school-concept-panoramic-web-template-vector-39963121.jpg" title="school concept panoramic web template" alt="school concept panoramic web template vector image"></noscript></a></li>
+						<li data-id="35238144" data-title="art education icon black sign" data-src="https://cdn5.vectorstock.com/i/thumbs/81/44/art-education-icon-black-sign-vector-35238144.jpg"><a href="//www.vectorstock.com/royalty-free-vector/art-education-icon-black-sign-vector-35238144" title="art education icon black sign vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/81/44/art-education-icon-black-sign-vector-35238144.jpg" title="art education icon black sign" alt="art education icon black sign vector image"></noscript></a></li>
+						<li data-id="40287209" data-title="back to school sticker badge" data-src="https://cdn5.vectorstock.com/i/thumbs/72/09/back-to-school-sticker-badge-vector-40287209.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-sticker-badge-vector-40287209" title="back to school sticker badge vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/72/09/back-to-school-sticker-badge-vector-40287209.jpg" title="back to school sticker badge" alt="back to school sticker badge vector image"></noscript></a></li>
+						<li data-id="40626628" data-title="flat back to school" data-src="https://cdn4.vectorstock.com/i/thumbs/66/28/flat-back-to-school-vector-40626628.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-back-to-school-vector-40626628" title="flat back to school vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/66/28/flat-back-to-school-vector-40626628.jpg" title="flat back to school" alt="flat back to school vector image"></noscript></a></li>
+						<li data-id="40952390" data-title="school education flat landing page template" data-src="https://cdn1.vectorstock.com/i/thumbs/23/90/school-education-flat-landing-page-template-vector-40952390.jpg"><a href="//www.vectorstock.com/royalty-free-vector/school-education-flat-landing-page-template-vector-40952390" title="school education flat landing page template vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/23/90/school-education-flat-landing-page-template-vector-40952390.jpg" title="school education flat landing page template" alt="school education flat landing page template vector image"></noscript></a></li>
+						<li data-id="38813164" data-title="back to school banner or poster background" data-src="https://cdn5.vectorstock.com/i/thumbs/31/64/back-to-school-banner-or-poster-background-vector-38813164.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-banner-or-poster-background-vector-38813164" title="back to school banner or poster background vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/31/64/back-to-school-banner-or-poster-background-vector-38813164.jpg" title="back to school banner or poster background" alt="back to school banner or poster background vector image"></noscript></a></li>
+						<li data-id="35586738" data-title="primary school class" data-src="https://cdn4.vectorstock.com/i/thumbs/67/38/primary-school-class-vector-35586738.jpg"><a href="//www.vectorstock.com/royalty-free-vector/primary-school-class-vector-35586738" title="primary school class vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/67/38/primary-school-class-vector-35586738.jpg" title="primary school class" alt="primary school class vector image"></noscript></a></li>
+						<li data-id="38149518" data-title="back to school web banner design school bag" data-src="https://cdn4.vectorstock.com/i/thumbs/95/18/back-to-school-web-banner-design-school-bag-vector-38149518.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-web-banner-design-school-bag-vector-38149518" title="back to school web banner design school bag vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/95/18/back-to-school-web-banner-design-school-bag-vector-38149518.jpg" title="back to school web banner design school bag" alt="back to school web banner design school bag vector image"></noscript></a></li>
+						<li data-id="40606173" data-title="book in layout with home hipster logo symbol icon" data-src="https://cdn4.vectorstock.com/i/thumbs/61/73/book-in-layout-with-home-hipster-logo-symbol-icon-vector-40606173.jpg"><a href="//www.vectorstock.com/royalty-free-vector/book-in-layout-with-home-hipster-logo-symbol-icon-vector-40606173" title="book in layout with home hipster logo symbol icon vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/61/73/book-in-layout-with-home-hipster-logo-symbol-icon-vector-40606173.jpg" title="book in layout with home hipster logo symbol icon" alt="book in layout with home hipster logo symbol icon vector image"></noscript></a></li>
+						<li data-id="38354443" data-title="banner school sale school background" data-src="https://cdn4.vectorstock.com/i/thumbs/44/43/banner-school-sale-school-background-vector-38354443.jpg"><a href="//www.vectorstock.com/royalty-free-vector/banner-school-sale-school-background-vector-38354443" title="banner school sale school background vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/44/43/banner-school-sale-school-background-vector-38354443.jpg" title="banner school sale school background" alt="banner school sale school background vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-similar-to_1861428" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-artist" class="group">
+				<h6><span class="icon"></span><strong>More by <a href="/royalty-free-vectors/vectors-by_leone_v" rel="nofollow">leone_v</a></strong></h6>
+
+			<div class="gallery large">
+				<ul>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/14/30/education-background-vector-1861430.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-background-vector-1861430" title="education background vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/14/30/education-background-vector-1861430.jpg" title="education background" alt="education background vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/78/91/education-background-vector-2297891.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-background-vector-2297891" title="education background vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/78/91/education-background-vector-2297891.jpg" title="education background" alt="education background vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/78/95/school-background-vector-2297895.jpg"><a href="//www.vectorstock.com/royalty-free-vector/school-background-vector-2297895" title="school background vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/78/95/school-background-vector-2297895.jpg" title="school background" alt="school background vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/91/18/back-to-school-vector-1679118.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-vector-1679118" title="back to school vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/91/18/back-to-school-vector-1679118.jpg" title="back to school" alt="back to school vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/60/54/sign-ideas-vector-1366054.jpg"><a href="//www.vectorstock.com/royalty-free-vector/sign-ideas-vector-1366054" title="sign ideas vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/60/54/sign-ideas-vector-1366054.jpg" title="sign ideas" alt="sign ideas vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/38/44/chemistry-vector-1303844.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chemistry-vector-1303844" title="chemistry vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/38/44/chemistry-vector-1303844.jpg" title="chemistry" alt="chemistry vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/60/53/knowledge-vector-1366053.jpg"><a href="//www.vectorstock.com/royalty-free-vector/knowledge-vector-1366053" title="knowledge vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/60/53/knowledge-vector-1366053.jpg" title="knowledge" alt="knowledge vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/80/57/back-to-school-vector-2708057.jpg"><a href="//www.vectorstock.com/royalty-free-vector/back-to-school-vector-2708057" title="back to school vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/80/57/back-to-school-vector-2708057.jpg" title="back to school" alt="back to school vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/17/51/education-background-vector-1321751.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-background-vector-1321751" title="education background vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/17/51/education-background-vector-1321751.jpg" title="education background" alt="education background vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/17/53/education-background-vector-1321753.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-background-vector-1321753" title="education background vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/17/53/education-background-vector-1321753.jpg" title="education background" alt="education background vector image"></noscript></a></li>
+				</ul>
+			</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="3371201" data-title="chemistry subjects" data-src="https://cdn2.vectorstock.com/i/thumbs/12/01/chemistry-subjects-vector-3371201.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chemistry-subjects-vector-3371201" title="chemistry subjects vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/12/01/chemistry-subjects-vector-3371201.jpg" title="chemistry subjects" alt="chemistry subjects vector image vector image"></noscript></a></li>
+						<li data-id="1679117" data-title="education concept" data-src="https://cdn3.vectorstock.com/i/thumbs/91/17/education-concept-vector-1679117.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-concept-vector-1679117" title="education concept vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/91/17/education-concept-vector-1679117.jpg" title="education concept" alt="education concept vector image vector image"></noscript></a></li>
+						<li data-id="3371228" data-title="set chemist" data-src="https://cdn4.vectorstock.com/i/thumbs/12/28/set-chemist-vector-3371228.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-chemist-vector-3371228" title="set chemist vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/12/28/set-chemist-vector-3371228.jpg" title="set chemist" alt="set chemist vector image vector image"></noscript></a></li>
+						<li data-id="1861427" data-title="education background" data-src="https://cdn3.vectorstock.com/i/thumbs/14/27/education-background-vector-1861427.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-background-vector-1861427" title="education background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/14/27/education-background-vector-1861427.jpg" title="education background" alt="education background vector image vector image"></noscript></a></li>
+						<li data-id="3350921" data-title="chemistry" data-src="https://cdn2.vectorstock.com/i/thumbs/09/21/chemistry-vector-3350921.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chemistry-vector-3350921" title="chemistry vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/09/21/chemistry-vector-3350921.jpg" title="chemistry" alt="chemistry vector image vector image"></noscript></a></li>
+						<li data-id="1145207" data-title="abstract background" data-src="https://cdn3.vectorstock.com/i/thumbs/52/07/abstract-background-vector-1145207.jpg"><a href="//www.vectorstock.com/royalty-free-vector/abstract-background-vector-1145207" title="abstract background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/52/07/abstract-background-vector-1145207.jpg" title="abstract background" alt="abstract background vector image vector image"></noscript></a></li>
+						<li data-id="3371234" data-title="chemical experiments" data-src="https://cdn5.vectorstock.com/i/thumbs/12/34/chemical-experiments-vector-3371234.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chemical-experiments-vector-3371234" title="chemical experiments vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/12/34/chemical-experiments-vector-3371234.jpg" title="chemical experiments" alt="chemical experiments vector image vector image"></noscript></a></li>
+						<li data-id="1239474" data-title="education" data-src="https://cdn5.vectorstock.com/i/thumbs/94/74/education-vector-1239474.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-vector-1239474" title="education vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/94/74/education-vector-1239474.jpg" title="education" alt="education vector image vector image"></noscript></a></li>
+						<li data-id="3350915" data-title="chemical process" data-src="https://cdn1.vectorstock.com/i/thumbs/09/15/chemical-process-vector-3350915.jpg"><a href="//www.vectorstock.com/royalty-free-vector/chemical-process-vector-3350915" title="chemical process vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/09/15/chemical-process-vector-3350915.jpg" title="chemical process" alt="chemical process vector image vector image"></noscript></a></li>
+						<li data-id="2821207" data-title="paper red heart" data-src="https://cdn3.vectorstock.com/i/thumbs/12/07/paper-red-heart-vector-2821207.jpg"><a href="//www.vectorstock.com/royalty-free-vector/paper-red-heart-vector-2821207" title="paper red heart vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/12/07/paper-red-heart-vector-2821207.jpg" title="paper red heart" alt="paper red heart vector image vector image"></noscript></a></li>
+						<li data-id="2732392" data-title="brain symbol" data-src="https://cdn3.vectorstock.com/i/thumbs/23/92/brain-symbol-vector-2732392.jpg"><a href="//www.vectorstock.com/royalty-free-vector/brain-symbol-vector-2732392" title="brain symbol vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/23/92/brain-symbol-vector-2732392.jpg" title="brain symbol" alt="brain symbol vector image vector image"></noscript></a></li>
+						<li data-id="1239468" data-title="symbols of physics" data-src="https://cdn4.vectorstock.com/i/thumbs/94/68/symbols-of-physics-vector-1239468.jpg"><a href="//www.vectorstock.com/royalty-free-vector/symbols-of-physics-vector-1239468" title="symbols of physics vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/94/68/symbols-of-physics-vector-1239468.jpg" title="symbols of physics" alt="symbols of physics vector image vector image"></noscript></a></li>
+						<li data-id="3308049" data-title="coffee cup" data-src="https://cdn5.vectorstock.com/i/thumbs/80/49/coffee-cup-vector-3308049.jpg"><a href="//www.vectorstock.com/royalty-free-vector/coffee-cup-vector-3308049" title="coffee cup vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/80/49/coffee-cup-vector-3308049.jpg" title="coffee cup" alt="coffee cup vector image vector image"></noscript></a></li>
+						<li data-id="1611436" data-title="stop icon hand" data-src="https://cdn2.vectorstock.com/i/thumbs/14/36/stop-icon-hand-vector-1611436.jpg"><a href="//www.vectorstock.com/royalty-free-vector/stop-icon-hand-vector-1611436" title="stop icon hand vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/14/36/stop-icon-hand-vector-1611436.jpg" title="stop icon hand" alt="stop icon hand vector image vector image"></noscript></a></li>
+						<li data-id="1239470" data-title="knowledge" data-src="https://cdn1.vectorstock.com/i/thumbs/94/70/knowledge-vector-1239470.jpg"><a href="//www.vectorstock.com/royalty-free-vector/knowledge-vector-1239470" title="knowledge vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/94/70/knowledge-vector-1239470.jpg" title="knowledge" alt="knowledge vector image vector image"></noscript></a></li>
+						<li data-id="1239485" data-title="atomic model" data-src="https://cdn1.vectorstock.com/i/thumbs/94/85/atomic-model-vector-1239485.jpg"><a href="//www.vectorstock.com/royalty-free-vector/atomic-model-vector-1239485" title="atomic model vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/94/85/atomic-model-vector-1239485.jpg" title="atomic model" alt="atomic model vector image vector image"></noscript></a></li>
+						<li data-id="1145073" data-title="texture of a steel mesh" data-src="https://cdn4.vectorstock.com/i/thumbs/50/73/texture-of-a-steel-mesh-vector-1145073.jpg"><a href="//www.vectorstock.com/royalty-free-vector/texture-of-a-steel-mesh-vector-1145073" title="texture of a steel mesh vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/50/73/texture-of-a-steel-mesh-vector-1145073.jpg" title="texture of a steel mesh" alt="texture of a steel mesh vector image vector image"></noscript></a></li>
+						<li data-id="1239475" data-title="education" data-src="https://cdn1.vectorstock.com/i/thumbs/94/75/education-vector-1239475.jpg"><a href="//www.vectorstock.com/royalty-free-vector/education-vector-1239475" title="education vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/94/75/education-vector-1239475.jpg" title="education" alt="education vector image vector image"></noscript></a></li>
+						<li data-id="2931384" data-title="circle shape" data-src="https://cdn5.vectorstock.com/i/thumbs/13/84/circle-shape-vector-2931384.jpg"><a href="//www.vectorstock.com/royalty-free-vector/circle-shape-vector-2931384" title="circle shape vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/13/84/circle-shape-vector-2931384.jpg" title="circle shape" alt="circle shape vector image vector image"></noscript></a></li>
+						<li data-id="3433248" data-title="coffee cup" data-src="https://cdn4.vectorstock.com/i/thumbs/32/48/coffee-cup-vector-3433248.jpg"><a href="//www.vectorstock.com/royalty-free-vector/coffee-cup-vector-3433248" title="coffee cup vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/32/48/coffee-cup-vector-3433248.jpg" title="coffee cup" alt="coffee cup vector image vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-by_leone_v" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-keywords" class="group">
+				<h6><span class="icon"></span><strong>Related Searches</strong></h6>
+				<ul>
+					<li><a href="/royalty-free-vectors/student-vectors">Student</a></li>
+					<li><a href="/royalty-free-vectors/equation-vectors">Equation</a></li>
+					<li><a href="/royalty-free-vectors/molecule-vectors">Molecule</a></li>
+					<li><a href="/royalty-free-vectors/background-vectors">Background</a></li>
+					<li><a href="/royalty-free-vectors/education-vectors">Education</a></li>
+					<li><a href="/royalty-free-vectors/concept-vectors">Concept</a></li>
+					<li><a href="/royalty-free-vectors/back-vectors">Back</a></li>
+					<li><a href="/royalty-free-vectors/physics-vectors">Physics</a></li>
+					<li><a href="/royalty-free-vectors/formula-vectors">Formula</a></li>
+					<li><a href="/royalty-free-vectors/inspiration-vectors">Inspiration</a></li>
+					<li><a href="/royalty-free-vectors/scientific-vectors">Scientific</a></li>
+					<li><a href="/royalty-free-vectors/design-vectors">Design</a></li>
+					<li><a href="/royalty-free-vectors/process-vectors">Process</a></li>
+					<li><a href="/royalty-free-vectors/presentation-vectors">Presentation</a></li>
+					<li><a href="/royalty-free-vectors/science-vectors">Science</a></li>
+					<li><a href="/royalty-free-vectors/cloud-vectors">Cloud</a></li>
+					<li><a href="/royalty-free-vectors/abstract-vectors">Abstract</a></li>
+					<li><a href="/royalty-free-vectors/to-vectors">To</a></li>
+					<li><a href="/royalty-free-vectors/poster-vectors">Poster</a></li>
+					<li><a href="/royalty-free-vectors/learn-vectors">Learn</a></li>
+					<li><a href="/royalty-free-vectors/learning-vectors">Learning</a></li>
+					<li><a href="/royalty-free-vectors/knowledge-vectors">Knowledge</a></li>
+					<li><a href="/royalty-free-vectors/examine-vectors">Examine</a></li>
+					<li><a href="/royalty-free-vectors/stylization-vectors">Stylization</a></li>
+					<li><a href="/royalty-free-vectors/schedule-vectors">Schedule</a></li>
+					<li><a href="/royalty-free-vectors/cover-vectors">Cover</a></li>
+					<li><a href="/royalty-free-vectors/discipline-vectors">Discipline</a></li>
+					<li><a href="/royalty-free-vectors/idea-vectors">Idea</a></li>
+					<li><a href="/royalty-free-vectors/school-vectors">School</a></li>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+	<!-- Footer -->
+	<footer>
+		<div>
+		<div class="column c1">
+			<nav class="company">
+				<h4>VectorStock</h4>
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+					<li class="sel"><a href="/free-vectors" title="Free Vectors">Free Vectors</a></li>
+					<li class="sel"><a href="/royalty-free-vectors" title="All Royalty-Free Vectors">All Vectors</a></li>
+				</ul>
+				<ul>
+					<li><a href="/what-is-a-vector" title="What is a Vector?">What is a Vector?</a></li>
+				</ul>
+				<ul>
+					<li class="sel"><a href="/faq" title="Frequently Asked Questions"><span class="long">Frequently Asked Questions</span><span class="short">FAQs</span></a></li>
+					<li><a href="/faq/members/terms-of-use" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+					<li class="sel"><a href="/contact" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="column c2">
+			<nav class="account">
+				<h4><span class="title">Account</span><span class="icon"></span></h4>
+					<ul>
+						<li><a href="/signup" title="Join Now">Join Now</a></li>
+						<li><a href="/pricing" title="Pricing">Pricing</a></li>
+						<li><a href="/?signup=1&contributor=1" title="Contributor Sign Up">Contributor Sign Up</a></li>
+						<li><a href="/faq/artists/why-sell-at-vectorstock" title="Contributor FAQ">Contributor FAQ</a></li>
+					</ul>
+			</nav>
+		</div>
+		<div class="column c3">
+			<nav class="social">
+				<h4>Social</h4>
+				<ul>
+					<li class="facebook sel"><a href="https://www.facebook.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Facebook</span><span class="icon"></span></a></li>
+					<li class="pinterest sel"><a href="https://pinterest.com/vectorstock/" target="_blank" rel="noreferrer"><span class="title">Pinterest</span><span class="icon"></span></a></li>
+					<li class="twitter sel"><a href="https://twitter.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Twitter</span><span class="icon"></span></a></li>
+				</ul>
+			</nav>
+			<div class="signoff">
+				<h5><a href="https://www.vectorstock.com/" title="VectorStock&reg;">VectorStock&reg;</a></h5>
+				<p>VectorStock and the VectorStock logo are registered trademarks of VectorStock Media.<br>
+				&copy; 2022. <span>All Rights Reserved.</span></p>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" nonce="pgnRCZvH0LprrCDsclIeZWBnGhcF2F7DT7WMfu9ruys=">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"02e09611df","applicationID":"156179534","transactionName":"ZV0ENRYCC0RYAkVbDVwXJRQXFwpaFhNeSwNeTB9MAhEAUhQXVFEWXUpJFw0GEg==","queueTime":0,"applicationTime":62,"atts":"SRoHQ14YGEo=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+</body>
+</html>

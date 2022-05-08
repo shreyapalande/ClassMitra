@@ -1,0 +1,28 @@
+{
+  "name": "classmitra-project",
+  "version": "1.0.0",
+  "description": "Some description",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webgeek2021/ClassMitra-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webgeek2021/ClassMitra-project/issues"
+  },
+  "homepage": "https://github.com/webgeek2021/ClassMitra-project#readme"
+}
